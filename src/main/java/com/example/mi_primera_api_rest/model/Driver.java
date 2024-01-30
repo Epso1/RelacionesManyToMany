@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Data
@@ -33,4 +34,8 @@ public class Driver {
     @JoinColumn(name = "constructorid")
     @JsonIgnoreProperties("drivers")
     Constructor constructor;
+
+    @OneToMany(mappedBy = "driver")
+    @JsonIgnoreProperties("driver")
+    private Set<Result> results;
 }
