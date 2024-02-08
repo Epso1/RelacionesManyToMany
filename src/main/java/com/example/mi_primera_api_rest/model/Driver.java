@@ -1,5 +1,6 @@
 package com.example.mi_primera_api_rest.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
@@ -33,9 +34,11 @@ public class Driver {
     @ManyToOne
     @JoinColumn(name = "constructorid")
     @JsonIgnoreProperties("drivers")
+    @JsonBackReference
     Constructor constructor;
 
     @OneToMany(mappedBy = "driver")
     @JsonIgnoreProperties("driver")
+    @JsonBackReference
     private Set<Result> results;
 }

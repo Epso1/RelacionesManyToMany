@@ -1,5 +1,6 @@
 package com.example.mi_primera_api_rest.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -19,6 +20,7 @@ public class Result {
 
     @ManyToOne
     @JoinColumn(name = "driverid")
+    @JsonBackReference
     Driver driver;
 
 

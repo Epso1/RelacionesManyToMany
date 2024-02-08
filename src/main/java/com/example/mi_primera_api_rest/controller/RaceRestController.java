@@ -51,7 +51,7 @@ public class RaceRestController {
     }
 
 
-    @DeleteMapping("/race/{name}")
+    @DeleteMapping("/races/{name}")
     public ResponseEntity<Race> deleteRaceByName(@PathVariable String name) {
         this.raceService.deleteRaceByName(name);
         return ResponseEntity.noContent().build();

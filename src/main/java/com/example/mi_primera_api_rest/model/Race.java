@@ -1,5 +1,6 @@
 package com.example.mi_primera_api_rest.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
@@ -37,6 +38,7 @@ public class Race {
 
     @OneToMany(mappedBy = "race")
     @JsonIgnoreProperties("race")
+    @JsonBackReference
     private Set<Result> results;
 }
 
