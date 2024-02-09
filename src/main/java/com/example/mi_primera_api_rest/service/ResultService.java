@@ -11,10 +11,4 @@ public interface ResultService {
     List<Result> getAll();
 
 
-    void saveResult(Result result);
-/*
-    void deleteResultByResultid(Long resultid);
-*/
-    List<Result> findByDriverid(Long driverid);
-
 }

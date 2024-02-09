@@ -25,18 +25,6 @@ public class ResultServiceImpl implements ResultService {
         return repository.findAll();
     }
 
-    @Override
-    public void saveResult(Result result) {
-        repository.save(result);
-    }
-/*
-    @Override
-    public void deleteResultByResultid(Long resultid) {
-        repository.deleteById(resultid);
-    }
-*/
-    @Override
-    public List<Result> findByDriverid(Long driverid){
-        return repository.findByDriverid(driverid);
-    }
+
+
 }

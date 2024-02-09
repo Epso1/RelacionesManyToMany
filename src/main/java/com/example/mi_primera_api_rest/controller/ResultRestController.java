@@ -25,33 +25,6 @@ public class ResultRestController {
         return ResponseEntity.ok(resultService.getAll());
     }
 
-    @GetMapping("/results/{driverid}")
-    public ResponseEntity<List<Result>> getResultsByDriverid(@PathVariable Long driverid) {
-        return ResponseEntity.ok(resultService.findByDriverid(driverid));
-    }
-/*
-    @PostMapping("/results")
-    public ResponseEntity<Result> create(@RequestBody Result result) {
-        if(result.getResultid() != null){
-            return ResponseEntity.badRequest().build();
-        }
-        this.resultService.saveResult(result);
-        return ResponseEntity.ok(result);
-    }
-
-    @PutMapping("/results")
-    public ResponseEntity<Result> update(@RequestBody Result result) {
-        this.resultService.saveResult(result);
-        return ResponseEntity.ok(result);
-    }
-
-
-    @DeleteMapping("/results/{resultid}")
-    public ResponseEntity<Result> deleteResultByResultid(@PathVariable Long resultid) {
-        this.resultService.deleteResultByResultid(resultid);
-        return ResponseEntity.noContent().build();
-    }
-*/
 
 
 }
